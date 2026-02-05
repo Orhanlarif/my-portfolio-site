@@ -206,7 +206,7 @@ section{
 .text-animation span::before{
     content: "";
     color: var(--main-color);
-    animation: words 10s infinite;
+    animation: words 16s infinite;
 }
 
 .text-animation span::after{
@@ -217,7 +217,7 @@ section{
     position: absolute;
     right: -8px;
     border-left: 3px solid var(--bg-color);
-    animation: cursor 0.6s infinite, typing 10s steps(10) infinite;
+    animation: cursor 0.6s infinite, typing 16s steps(1) infinite;
 }
 
 
@@ -240,18 +240,28 @@ section{
 }
 
 @keyframes typing{
-    10%, 
-    15%,
-    60%,
-    65% {
+    0%, 12.5% {
         width: 0;
     }
-
-    5%,
-    20%, 
-    55%, 
-    70% {
+    
+    12.5%, 37.5% {
         width: calc(100% + 8px);
+    }
+    
+    37.5%, 50% {
+        width: 0;
+    }
+    
+    50%, 62.5% {
+        width: 0;
+    }
+    
+    62.5%, 87.5% {
+        width: calc(100% + 8px);
+    }
+    
+    87.5%, 100% {
+        width: 0;
     }
 }
 /*--HOME END--*/
