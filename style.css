@@ -206,7 +206,7 @@ section{
 .text-animation span::before{
     content: "";
     color: var(--main-color);
-    animation: words 6s infinite;
+    animation: words 8s infinite;
 }
 
 .text-animation span::after{
@@ -217,7 +217,7 @@ section{
     position: absolute;
     right: -8px;
     border-left: 3px solid var(--bg-color);
-    animation: cursor 0.6s infinite, typing 6s steps(14) infinite;
+    animation: cursor 0.6s infinite, typing 8s steps(15) infinite;
 }
 
 
@@ -228,29 +228,26 @@ section{
 }
 
 @keyframes words{
-  0%, 49%{
+  0%, 49.999%{
     content: "Game Developer";
-  }
-
+}
   50%, 100%{
     content: "Web Developer";
   }
 }
 
 @keyframes typing{
-  /* 1. kelime: yaz (0-5) -> bekle (5-35) -> sil (35-40) -> kısa boşluk (40-50) */
-  0%   { width: 0; }
-  5%   { width: calc(100% + 8px); }
-  35%  { width: calc(100% + 8px); }
-  40%  { width: 0; }
-  50%  { width: 0; }
+  /* 1. kelime (0-50): 0-12.5 yaz, 12.5-25 bekle, 25-37.5 sil, 37.5-50 boş */
+  0%, 50%, 100% { width: 0; }
 
-  /* 2. kelime: yaz (50-55) -> bekle (55-85) -> sil (85-90) -> kısa boşluk (90-100) */
-  55%  { width: calc(100% + 8px); }
-  85%  { width: calc(100% + 8px); }
-  90%  { width: 0; }
-  100% { width: 0; }
+  12.5%, 25% { width: calc(100% + 8px); }
+  37.5%, 50% { width: 0; }
+
+  /* 2. kelime (50-100): 50-62.5 yaz, 62.5-75 bekle, 75-87.5 sil, 87.5-100 boş */
+  62.5%, 75% { width: calc(100% + 8px); }
+  87.5%, 100% { width: 0; }
 }
+
 
 
 
