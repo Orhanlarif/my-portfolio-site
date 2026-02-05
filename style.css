@@ -206,7 +206,7 @@ section{
 .text-animation span::before{
     content: "";
     color: var(--main-color);
-    animation: words 10s infinite;
+    animation: words 4s infinite;
 }
 
 .text-animation span::after{
@@ -217,7 +217,7 @@ section{
     position: absolute;
     right: -8px;
     border-left: 3px solid var(--bg-color);
-    animation: cursor 0.6s infinite, typing 2s steps(15) infinite;
+    animation: cursor 0.6s infinite, typing 6s steps(15) infinite;
 }
 
 
