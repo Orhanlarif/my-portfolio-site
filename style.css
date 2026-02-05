@@ -206,7 +206,7 @@ section{
 .text-animation span::before{
     content: "";
     color: var(--main-color);
-    animation: words 10s infinite;
+    animation: words 6s infinite;
 }
 
 .text-animation span::after{
@@ -217,7 +217,7 @@ section{
     position: absolute;
     right: -8px;
     border-left: 3px solid var(--bg-color);
-    animation: cursor 0.6s infinite, typing 10s steps(14) infinite;
+    animation: cursor 0.6s infinite, typing 6s steps(14) infinite;
 }
 
 
@@ -238,25 +238,21 @@ section{
 }
 
 @keyframes typing{
-  /* her kelimede: yaz -> bekle -> sil -> boş bekle */
+  /* 1. kelime: yaz (0-5) -> bekle (5-35) -> sil (35-40) -> kısa boşluk (40-50) */
+  0%   { width: 0; }
+  5%   { width: calc(100% + 8px); }
+  35%  { width: calc(100% + 8px); }
+  40%  { width: 0; }
+  50%  { width: 0; }
 
-  /* 1. kelime silme anları */
-  10%, 15% { width: 0; }
-
-  /* 1. kelime yazılı (görünüyor) */
-  0%, 5%,
-  20%, 45% { width: calc(100% + 8px); }
-
-  /* 2. kelime silme anları */
-  60%, 65% { width: 0; }
-
-  /* 2. kelime yazılı (görünüyor) */
-  50%, 55%,
-  70%, 95% { width: calc(100% + 8px); }
-
-  /* döngü sonu temiz kapansın */
+  /* 2. kelime: yaz (50-55) -> bekle (55-85) -> sil (85-90) -> kısa boşluk (90-100) */
+  55%  { width: calc(100% + 8px); }
+  85%  { width: calc(100% + 8px); }
+  90%  { width: 0; }
   100% { width: 0; }
 }
+
+
 
 /*--HOME END--*/
 
