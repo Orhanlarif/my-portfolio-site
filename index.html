@@ -16,44 +16,44 @@
 <body>
 
     <!--- HEADER START --->
+    <div class="menu-overlay" id="menu-overlay"></div>
     <header class="header">
-        <a href="#home" class="logo"> Arif B. Orhanlar </a>
+        <a href="#home" class="logo">Arif B. Orhanlar</a>
         
+        <nav class="navbar">
+            <a href="arifb.orhanlarCV.pdf" target="_blank" data-i18n="nav.cv">CV</a>
+            <a href="mailto:orhanlarif@gmail.com" data-i18n="nav.contact">Contact</a>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="tr">TR</button>
+            </div>
+        </nav>
         <i class='bx bx-menu' id="menu-icon"></i>
-     
-    <nav class="navbar">
-
-        <a href="arif_orhanlarCV.pdf" target="_blank">CV</a>
-        <a href="mailto:orhanlarif@gmail.com">Contact</a>
-
-    </nav>
-    
     </header>
     <!---- HEADER END  --->
 
     <!-----HOME START ---->
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Hello, I'm Arif</h1>
-            <h3 class="text-animation">I'm a     <span></span>    </h3>
+            <h1 data-i18n="home.greeting">Hello, I'm Arif</h1>
+            <h3 class="text-animation"><span data-i18n="home.imA">I'm a</span> <span id="typewriter"></span><span class="cursor"></span></h3>
             
-            <p>
-                I have been working with software for 2 years, I have a command of the basic C# and
-                Python languages and I aim to advance in ths field. I am intensely working on improving
-                myself in every area, from mastering game development and game engines to the process
-                of publishing a game on platforms from its very beginning. I am turning my dream games
-                into reality. In short, I have a command of every area in the mobile game section, from 0 to
-                the end.
+            <p data-i18n="home.description">
+                Hello, I'm Arif. I live in Istanbul and am a 2nd-year Computer Programming
+                student at Nişantaşı University. I have been in the software world
+                for 2 years, dedicating the last year entirely to game development.
+                I develop game projects using Unity and also work in web development.
+                I bring my projects to life with my passion for learning and creating.
             </p>
             <div class="social-icons">
                 <a href="https://www.instagram.com/ariforhnlr/" target="_blank"> <i class='bx bxl-instagram'></i> </a>
-                <a href="https://www.linkedin.com/in/arif-berat-orhanlar-47b434313/" target="_blank"> <i class='bx bxl-linkedin'></i> </a>
+                <a href="https://www.linkedin.com/in/arif-orhanlar-47b434313/" target="_blank"> <i class='bx bxl-linkedin'></i> </a>
                 <a href="https://github.com/Orhanlarif" target="_blank"> <i class='bx bxl-github'></i> </a>
             </div>
 
             <div class="btn-group">
-                <a href="arif_orhanlarCV.pdf" target="_blank" class="btn">CV</a>
-                <a href="mailto:orhanlarif@gmail.com" class="btn">Contact Me</a>
+                <a href="arifb.orhanlarCV.pdf" target="_blank" class="btn" data-i18n="nav.cv">CV</a>
+                <a href="mailto:orhanlarif@gmail.com" class="btn" data-i18n="home.contactBtn">Contact Me</a>
             </div>
         </div>
 
