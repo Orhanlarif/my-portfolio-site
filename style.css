@@ -206,7 +206,7 @@ section{
 .text-animation span::before{
     content: "";
     color: var(--main-color);
-    animation: words 20s infinite;
+    animation: words 10s infinite;
 }
 
 .text-animation span::after{
@@ -217,7 +217,7 @@ section{
     position: absolute;
     right: -8px;
     border-left: 3px solid var(--bg-color);
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    animation: cursor 0.6s infinite, typing 10s steps(10) infinite;
 }
 
 
@@ -229,56 +229,28 @@ section{
 
 @keyframes words{
     0%, 
-    20%{
-        content: "Front-End Developer";
+    50%{
+        content: "Game Developer";
     }
 
-    21%, 
-    40%{
-        content: "Unity Developer";
-    }
-
-    41%, 
-    60%{
-        content: "Mobile Game Developer";
-    }
-
-      61%, 
-    80%{
-        content: "2D Game Developer";
-    }
-
-       81%, 
+    51%, 
     100%{
         content: "Web Developer";
     }
 }
 
 @keyframes typing{
-    /*5, 10, 15, 20, 25, 30, 35, 40, 45, 50,...95 */
-
     10%, 
     15%,
-    30%,
-    35%, 
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95% {
+    60%,
+    65% {
         width: 0;
     }
 
     5%,
     20%, 
-    25%, 
-    40%, 
-    45%, 
-    60%, 
-    65%, 
-    80%, 
-    85% {
+    55%, 
+    70% {
         width: calc(100% + 8px);
     }
 }
