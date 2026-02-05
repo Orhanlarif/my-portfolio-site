@@ -206,7 +206,7 @@ section{
 .text-animation span::before{
     content: "";
     color: var(--main-color);
-    animation: words 8s infinite;
+    animation: words 4s infinite;
 }
 
 .text-animation span::after{
