@@ -51,7 +51,8 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 5;
+    /* Header, navbar ve menü ikonunun overlay'in üzerinde tıklanabilir olması için daha yüksek z-index */
+    z-index: 20;
 }
 
 .logo {
@@ -481,6 +482,20 @@ section {
 
     .home-img img {
         width: min(50vw, 200px);
+    }
+
+    /* Mobilde butonların ışıkları üst üste binmesin diye daha yumuşak glow ve ekstra boşluk */
+    .btn-group {
+        gap: 1.2rem;
+        max-width: 260px;
+    }
+
+    .btn {
+        box-shadow: 0 0 16px rgba(0, 140, 255, 0.7);
+    }
+
+    .btn:hover {
+        box-shadow: 0 0 26px rgba(0, 140, 255, 0.9);
     }
 
     .navbar {
