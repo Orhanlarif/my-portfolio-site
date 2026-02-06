@@ -294,7 +294,7 @@ section {
 .cursor {
     display: inline-block;
     width: 0;
-    border-left: 3px solid var(--main-color);
+    border-left: 2px solid var(--main-color);
     margin-left: 2px;
     height: 0.9em;
     vertical-align: middle;
@@ -484,6 +484,12 @@ section {
         width: min(50vw, 200px);
     }
 
+    /* Mobilde imlecin hizasını metinle tam ortalamaya çalış */
+    .cursor {
+        height: 0.8em;
+        vertical-align: middle;
+    }
+
     /* Mobilde butonların ışıkları üst üste binmesin diye daha yumuşak glow ve ekstra boşluk */
     .btn-group {
         gap: 1.2rem;
@@ -521,6 +527,13 @@ section {
     }
     .logo {
         font-size: 1.8rem;
+    }
+}
+
+/* PC'de imleci biraz daha kalın tut */
+@media (min-width: 992px) {
+    .cursor {
+        border-left-width: 3px;
     }
 }
 
